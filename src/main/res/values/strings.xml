@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="romanblack_call_call">Call</string>
+    <string name="romanblack_call_cancel">Cancel</string>
+    <string name="common_home_upper">Home</string>
+</resources>

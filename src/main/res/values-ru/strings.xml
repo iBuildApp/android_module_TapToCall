@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="romanblack_call_call">Вызов</string>
+    <string name="romanblack_call_cancel">Отмена</string>
+    <string name="common_home_upper">Домой</string>
+</resources>

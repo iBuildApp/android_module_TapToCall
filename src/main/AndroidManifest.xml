@@ -1,0 +1,8 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ibuildapp.romanblack.CallPlugin">
+
+    <application>
+        <activity android:name="CallPlugin"/>
+    </application>
+
+</manifest>
