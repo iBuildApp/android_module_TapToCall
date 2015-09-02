@@ -1,4 +1,4 @@
-# android_module_TapToCall
+# android module TapToCall
 Tap to Call module allows users to make calls on predefined phone number.
 
 **XML Structure declaration**
