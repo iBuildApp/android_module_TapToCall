@@ -21,6 +21,7 @@ import android.net.Uri;
 import android.util.Log;
 import android.view.View;
 import com.appbuilder.sdk.android.AppBuilderModuleMain;
+import com.appbuilder.sdk.android.StartUpActivity;
 import com.appbuilder.sdk.android.Widget;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
@@ -33,6 +34,7 @@ import java.io.ByteArrayInputStream;
 /**
  * Main module class. Module entry point. Represents Call widget.
  */
+@StartUpActivity(moduleName = "Call")
 public class CallPlugin extends AppBuilderModuleMain {
 
     private boolean flurryStarted = false;
