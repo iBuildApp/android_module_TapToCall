@@ -1,6 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ibuildapp.romanblack.CallPlugin">
 
+    <uses-permission android:name="android.permission.CALL_PHONE" />
     <application>
         <activity android:name="CallPlugin"/>
     </application>

@@ -60,11 +60,9 @@ public class CallPlugin extends AppBuilderModuleMain {
         try {
             Intent callIntent = new Intent(Intent.ACTION_CALL);
             callIntent.setData(Uri.parse(callString));
-            startActivity(callIntent);
+            startActivityForResult(callIntent, 1);
         } catch (ActivityNotFoundException activityException) {
             Log.d("CallerPlugin", "ActivityNotFoundException", activityException);
-        } finally {
-            finish();
         }
     }
 
@@ -197,5 +195,11 @@ public class CallPlugin extends AppBuilderModuleMain {
                 Log.e("", "");
             }
         }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        finish();
     }
 }
