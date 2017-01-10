@@ -22,6 +22,7 @@ import android.util.Log;
 import android.view.View;
 import com.appbuilder.sdk.android.AppBuilderModuleMain;
 import com.appbuilder.sdk.android.StartUpActivity;
+import com.appbuilder.sdk.android.Utils;
 import com.appbuilder.sdk.android.Widget;
 import org.w3c.dom.Document;
 import org.w3c.dom.NodeList;
@@ -114,7 +115,11 @@ public class CallPlugin extends AppBuilderModuleMain {
             setContentView(R.layout.romanblack_call_main);
             Intent activityIntent = getIntent();
             Widget widget = (Widget) activityIntent.getSerializableExtra("Widget");
-            String xmlData = widget.getPluginXmlData();
+
+            String xmlData = widget.getPluginXmlData().length() == 0
+                    ? Utils.readXmlFromFile(widget.getPathToXmlFile())
+                    : widget.getPluginXmlData();
+
             if (xmlData == null) {
                 finish();
             }
