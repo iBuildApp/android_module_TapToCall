@@ -67,10 +67,12 @@ public class CallPlugin extends AppBuilderModuleMain {
         try {
             Intent callIntent = new Intent(Intent.ACTION_DIAL);
             callIntent.setData(Uri.parse(callString));
-            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
+      /*     if (ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
                 return;
-            }
-            startActivityForResult(callIntent, 1);
+            }*/
+          //  startActivityForResult(callIntent, 1);
+             startActivity(callIntent);
+            overridePendingTransition(R.anim.activity_open_translate, R.anim.activity_close_scale);
 
         } catch (ActivityNotFoundException activityException) {
             Log.d("CallerPlugin", "ActivityNotFoundException", activityException);
